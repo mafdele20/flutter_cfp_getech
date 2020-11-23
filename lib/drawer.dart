@@ -1,3 +1,4 @@
+import 'package:demo/Departement.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/listepharmacie.dart';
 import 'package:demo/ajoutpharmacie.dart';
@@ -18,13 +19,13 @@ class DrawerMain extends StatelessWidget {
                 backgroundColor: Colors.white,
                 radius: 70,
                 backgroundImage: AssetImage('images/logo.png'),
+
               )
           ),
           ListTile(
             title: Text('Profil' ,style: TextStyle(fontSize: 20)),
             onTap: (){
               Navigator.of(context).pop();
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil()));
 
             },
           ),
@@ -32,6 +33,7 @@ class DrawerMain extends StatelessWidget {
           ListTile(
             title: Text('Candidater',style: TextStyle(fontSize: 20)),
             onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Accueil()));
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Ajout()));
             },
@@ -50,6 +52,14 @@ class DrawerMain extends StatelessWidget {
             onTap: (){
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Liste()));
+            },
+          ),
+          Divider(height: 2,color: Colors.deepOrange,),
+          ListTile(
+            title: Text('Ajouter un  departements',style: TextStyle(fontSize: 20)),
+            onTap: (){
+              Navigator.of(context).pop();
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Departement()));
             },
           ),
         ],

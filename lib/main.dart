@@ -2,7 +2,9 @@ import 'package:demo/drawer.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MaterialApp(home:Test(), )) ;
+  runApp(MaterialApp(home:Test(),
+      debugShowCheckedModeBanner: false
+  )) ;
 }
 
 class Test extends StatelessWidget{
